@@ -1,38 +1,100 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  margin-left:20vw;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .App >h1
+  {
+    margin-left:10vw;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 0.05vw 0.05vh;
+    font-size:4vw;
   }
-  to {
-    transform: rotate(360deg);
+  .App>h2{
+  margin-left:18vw;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 0.05vw 0.05vh;
+    color:red;
+    font-size:3vw;
   }
-}
+  .App>h3{
+    margin-left:21.5vw;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 0.05vw 0.05vh;
+    color:darkmagenta;
+    font-size:2vw;
+  
+  }
+  .App>h6{
+    margin-left:26vw;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 0.05vw 0.05vh;
+    color:fuchsia;
+    font-size:1vw;
+  }
+  .ShowPokemons
+  {
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+  }
+  .rotate
+  {
+    width:20vw;
+    margin-top:20vh;
+    animation:spin 2s linear infinite;
+    -webkit-animation: spin 2s linear infinite;
+  }
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    25%{-webkit-transform: rotate(90deg);}
+    50%{-webkit-transform: rotate(180deg);}
+    75%{-webkit-transform: rotate(270deg);}
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  @keyframes spin
+  {
+    0% { -webkit-transform: rotate(0deg); }
+    25%{-webkit-transform: rotate(90deg);}
+    50%{-webkit-transform: rotate(180deg);}
+    75%{-webkit-transform: rotate(270deg);}
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  .pokemoncard
+  {
+    border:2px solid black;
+    justify-content: center;
+    align-items: center;
+    width:30vw;
+  }
+  .pokemonname
+  {
+    font-size: 2vw;
+  }
+  .cardimg
+  {
+    
+    height:50%;
+  }
+  .pokemondetails
+  {
+    font-size:1vw;
+  }
+  .loading
+  {
+    margin-left:10vw;
+    margin-top:20vh;
+    text-align:center;
+    
+  }
+  .buttons{
+    width:60vw;
+    display:flex;
+    justify-content: space-between;
+  }
+  .buttons>button
+  {
+    width:12vw;
+    height:8vh;
+    font-size:2vw;
+    background-color:tomato;
+  
+  }
