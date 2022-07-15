@@ -10,6 +10,7 @@ function App() {
   const [prevbuttonlink,setprevbuttonlink]=useState("");
   const [currpageurl,setcurrpageurl]=useState("https://pokeapi.co/api/v2/pokemon");
   const [loading,setloading]=useState(true);
+  const [query, setQuery] = useState("");
   useEffect(()=>{
     async function fetchdata()
     {
@@ -22,7 +23,6 @@ function App() {
     setprevbuttonlink(response.previous)
     let pokemondetailsarray=await Promise.all(response.results.map(async (pokemon)=>{
      let eachpokemon=await getpokemon(pokemon.url);
-     //console.log(eachpokemon);
      return eachpokemon;
     }))
     setpokemonlist(pokemondetailsarray);
@@ -53,7 +53,10 @@ function App() {
       {pokemonlist.map((pokemon)=>{
         return(
           <div>
-            <Pokemoncard pokemon={pokemon}/>
+            <Pokemoncard 
+            pokemon={pokemon}
+            key={pokemon.id}
+            />
           </div>
         )
       })}
